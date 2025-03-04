@@ -1,0 +1,24 @@
+@use "../../core" as *;
+
+.experiencesContainer {
+  @include place-content-items-center;
+  gap: 1rem;
+}
+
+.experienceList {
+  margin: 1rem 0 0 1.4rem;
+  color: #cbd5e1;
+
+  div {
+    position: absolute;
+    z-index: -1;
+    left: 6.7px;
+    top: 45%;
+
+    width: 0.1rem;
+    height: 60%;
+
+    background-color: #e5e7eb;
+    border-radius: 25px;
+  }
+}

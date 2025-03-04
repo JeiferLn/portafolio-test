@@ -1,0 +1,23 @@
+@use '../core' as *;
+
+.badge {
+  background-color: #c7e1ff;
+  color: #1855a4;
+  text-decoration: none;
+  
+  padding: 0.3rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: #1855a4;
+    color: #c7e1ff;
+    cursor: pointer;
+  }
+
+  @media (width <= $tablet) {
+    display: none;
+  }
+}

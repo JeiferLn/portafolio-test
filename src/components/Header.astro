@@ -1,0 +1,27 @@
+---
+import "../styles/components/header.module.scss";
+---
+
+<header id="header">
+  <nav>
+    <a href="#home">Inicio</a>
+    <a href="#experience">Experiencia</a>
+    <a href="#projects">Proyectos</a>
+  </nav>
+</header>
+
+<script>
+  let lastScrollY = window.scrollY;
+  const header = document.getElementById("header");
+
+  if (header) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > lastScrollY) {
+        header.style.transform = "translateY(-100%)";
+      } else {
+        header.style.transform = "translateY(0)";
+      }
+      lastScrollY = window.scrollY;
+    });
+  }
+</script>

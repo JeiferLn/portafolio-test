@@ -1,0 +1,66 @@
+---
+import CodeLink from "./project-links/CodeLink.astro";
+
+import { Image } from "astro:assets";
+import TeslaImage from "../../assets/tesla-image.jpg";
+import CatalogoImage from "../../assets/catalogo-image.jpg";
+import TodoImage from "../../assets/todo-image.png";
+
+import styles from "../../styles/components/projects/projectItem.module.scss";
+import Links from "./project-links/Links.astro";
+
+export interface ProjectItemProps {
+  title: string;
+  description: string;
+  technologies: string[];
+  date: string;
+  codeLink: string;
+  pageLink?: string;
+}
+
+const { title, description, technologies, date, codeLink, pageLink } =
+  Astro.props as ProjectItemProps;
+
+const index = Astro.props.index as number;
+
+const image = title.includes("Tesla")
+  ? TeslaImage
+  : title.includes("TODO")
+    ? TodoImage
+    : CatalogoImage;
+---
+
+<li class={styles.projectItem}>
+  <div>
+    <Image
+      src={image}
+      alt={title + " project"}
+      loading={index < 2 ? "eager" : "lazy"}
+    />
+
+    <div class={styles.projectInfo}>
+      <div class={styles.projectContent}>
+        <div class={styles.projectText}>
+          <h3>{title}</h3>
+          <div>
+            {technologies.map((technology) => <span>{technology}</span>)}
+          </div>
+          <p>{description}</p>
+        </div>
+
+        <div class={styles.projectFooter}>
+          <p>{date}</p>
+          {
+            !pageLink ? (
+              <CodeLink link={codeLink} />
+            ) : (
+              <div class={styles.links}>
+                <Links codeLink={codeLink} pageLink={pageLink}/>
+              </div>
+            )
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</li>

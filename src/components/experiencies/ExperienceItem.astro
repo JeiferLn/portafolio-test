@@ -1,0 +1,17 @@
+---
+import styles from "../../styles/components/experiences/experienceItem.module.scss";
+
+export interface ExperienceItemProps {
+  title: string;
+  date: string;
+  description: string;
+}
+
+const { title, date, description } = Astro.props as ExperienceItemProps;
+---
+
+<li class={styles.experienceItem}>
+  <h3>{date}</h3>
+  <h2>{title}</h2>
+  <p>{description}</p>
+</li>

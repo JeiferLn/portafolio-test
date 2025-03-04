@@ -1,0 +1,70 @@
+@use "../core" as *;
+
+main {
+  padding: 0 20%;
+
+  @media (width <= $tablet) {
+    padding: 0 10%;
+  }
+  .heroSection {
+    padding-top: 5rem;
+
+    img {
+      width: 4rem;
+      height: 4rem;
+      object-position: center;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      gap: 1rem;
+      margin-bottom: 2rem;
+
+      @include place-content-items-center;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      margin-bottom: 1rem;
+
+      .highlightText {
+        color: #fef08ae6;
+      }
+
+      .locationText {
+        color: #fecacae6;
+      }
+
+      .uniqueApplications {
+        opacity: 0.75;
+      }
+    }
+
+    nav {
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+
+      @media (width <= $tablet) {
+        display: grid;
+      }
+    }
+  }
+
+  .experienceSection {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    position: relative;
+  }
+
+  .projectsSection {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    position: relative;
+  }
+}

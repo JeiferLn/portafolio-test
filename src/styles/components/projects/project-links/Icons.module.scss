@@ -1,0 +1,63 @@
+.iconPageLink {
+  padding: 1rem 0.25rem 0.1rem 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 25px;
+
+  transition: all 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #e5e7eb;
+
+    svg {
+      color: #1f2937;
+    }
+  }
+
+  svg {
+    color: #e5e7eb;
+  }
+}
+
+.iconCodeLink {
+  margin-left: 0.5rem;
+  padding: 1rem 0.5rem 0.1rem 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 25px;
+
+  transition: all 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #e5e7eb;
+
+    svg {
+      color: #1f2937;
+    }
+  }
+
+  svg {
+    color: #e5e7eb;
+  }
+}
+
+.iconLink {
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 25px;
+
+  transition: all 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #e5e7eb;
+
+    svg {
+      color: #1f2937;
+    }
+  }
+
+  svg {
+    color: #e5e7eb;
+  }
+}

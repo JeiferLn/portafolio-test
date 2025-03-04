@@ -1,0 +1,45 @@
+---
+import ProjectItem, { type ProjectItemProps } from "./ProjectItem.astro";
+
+import ProjectsIcon from "../../icons/ProjectsIcon.astro";
+
+import styles from "../../styles/components/projects/projectsContainer.module.scss";
+
+const projects: ProjectItemProps[] = [
+  {
+    title: "Clon de Tesla",
+    description:
+      "He replicado la pagina de inicio de tesla en la cual se puede ver los modelos de autos que ofrece.",
+    technologies: ["Next.js", "TailwindCSS"],
+    date: "10 Mayo, 2024",
+    codeLink: "https://github.com/JeiferLn/Tesla-Clone",
+    pageLink: "https://tesla-clone-next.vercel.app/",
+  },
+  {
+    title: "Catalogo de Bolsos",
+    description:
+      "He desarrollado un catalogo de bolsos, usando la busqueda de productos mediante un buscador y filtrado por categorias.",
+    technologies: ["React", "CSS"],
+    date: "5 Abril, 2021",
+    codeLink: "https://github.com/WinstonSanchez/catalogo-Bolsos",
+    pageLink: "https://winstonsanchez.github.io/catalogo-Bolsos/",
+  },
+  {
+    title: "TODO App",
+    description: "He desarrollado una aplicacion de tareas por hacer.",
+    technologies: ["React", "CSS"],
+    date: "5 Marzo, 2024",
+    codeLink: "https://github.com/JeiferLn/React-TODO",
+    pageLink: "https://jeiferln.github.io/React-TODO/",
+  },
+];
+---
+
+<div class={styles.projectsContainer}>
+  <ProjectsIcon />
+  <h2>Projectos</h2>
+</div>
+
+<ul class={styles.projectsList}>
+  {projects.map((project, index) => <ProjectItem {...project} index={index} />)}
+</ul>

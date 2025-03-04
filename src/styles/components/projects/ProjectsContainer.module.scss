@@ -1,0 +1,14 @@
+@use "../../core" as *;
+
+.projectsContainer {
+  @include place-content-items-center;
+  gap: 1rem;
+}
+
+.projectsList {
+    margin: 1rem 0 0 1.4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    list-style: none;
+}

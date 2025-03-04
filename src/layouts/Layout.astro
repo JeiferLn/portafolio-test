@@ -1,0 +1,29 @@
+---
+import Header from "../components/Header.astro";
+
+import "@fontsource-variable/onest";
+import "../styles/global.scss";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="This is a portfolio test website created with Astro."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Portafolio Test</title>
+  </head>
+  <body>
+    <div class="background"></div>
+
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>

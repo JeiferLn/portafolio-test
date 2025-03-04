@@ -1,0 +1,24 @@
+---
+import ExperienceIcon from "../../icons/ExperienceIcon.astro";
+import ExperienceItem, { type ExperienceItemProps } from "./ExperienceItem.astro";
+
+import styles from "../../styles/components/experiences/ExperiencesContainer.module.scss";
+
+const expierience: ExperienceItemProps = {
+  date: "Abril 2022 - Actualmente.",
+  title: "Freelance",
+  description:
+    "Trabajo como freelancer de manera versátil, utilizando diversas tecnologías para adaptarme a las necesidades del proyecto.",
+};
+---
+
+<div class={styles.experiencesContainer}>
+  <ExperienceIcon />
+  <h2>Experiencia Laboral</h2>
+</div>
+
+<ul class={styles.experienceList}>
+  <div></div>
+
+  <ExperienceItem {...expierience} />
+</ul>

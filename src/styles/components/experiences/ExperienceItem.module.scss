@@ -1,0 +1,24 @@
+.experienceItem {
+  &::marker {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #bae6fdcc;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    color: #fef08ae6;
+  }
+
+  p {
+    color: #e5e7eb;
+  }
+}

@@ -1,0 +1,22 @@
+@mixin place-content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin place-content-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin place-content-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin place-content-items-center {
+  display: flex;
+  align-items: center;
+}

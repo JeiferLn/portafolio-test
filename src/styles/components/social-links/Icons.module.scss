@@ -1,0 +1,38 @@
+@use "../../core" as *;
+
+.iconContact {
+  @include place-content-center;
+  gap: 0.5rem;
+
+  border-radius: 25px;
+  background-color: #ffffff0d;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  padding: 0.5rem 0.8rem 0.3rem 0.8rem;
+
+  text-decoration: none;
+  transition: all 0.2s;
+
+  @media (width > $tablet) {
+    &:hover {
+      border-color: #a1a1a1;
+      background-color: rgba(255, 255, 255, 0.1);
+      scale: 1.05;
+    }
+  }
+
+  div {
+    padding: 0.2rem 0.2rem 0.1rem 0.2rem;
+    border-radius: 4px;
+
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+
+p {
+  color: #ffffff;
+  font-size: 1rem;
+}

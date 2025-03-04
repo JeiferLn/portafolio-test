@@ -1,0 +1,9 @@
+@use '../core' as *;
+
+.footer {
+  padding: 8rem 0 1rem 0;
+  font-size: 0.8rem;
+  color: #ffffff5e; 
+
+  @include place-content-center;
+}

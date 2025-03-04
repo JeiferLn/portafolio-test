@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import ExperienceContainer from "../components/experiencies/ExperiencesContainer.astro";
+import ProjectsContainer from "../components/projects/ProjectsContainer.astro";
+
+import Linkedin from "../components/social-links/Linkedin.astro";
+import Github from "../components/social-links/Github.astro";
+import Mail from "../components/social-links/Mail.astro";
+
+import Photo from "../assets/photo.jpeg";
+
+import styles from "../styles/pages/index.module.scss";
+---
+
+<Layout>
+  <main>
+    <section class={styles.heroSection} id="home">
+      <Image src={Photo} alt={"Jeifer Leon"} loading={"eager"} />
+      <h1>
+        Hey, soy Jeifer Leon <Badge>Disponible para trabajar</Badge>
+      </h1>
+      <h2>
+        1 año de experiencia. <span class={styles.highlightText}
+          >Desarrollador Web especializado en el Desarrollo Frontend</span
+        >. <span class={styles.locationText}>De Cucúta, Colombia 🇨🇴</span>.
+        <span class={styles.uniqueApplications}
+          >especializado en creaor aplicaciones unicas</span
+        >.
+      </h2>
+
+      <nav>
+        <Linkedin href="https://www.linkedin.com/in/jeifer-leon-59995b307/" />
+        <Github href="https://github.com/JeiferLn" />
+        <Mail
+          href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWtMrmQLFQZSSmvRGwFcXtSQVgdkFMmTwWLwbjrwFvtMmBTVgRjQVwgHnNZcvqkVLmcQMpzZv"
+        />
+      </nav>
+    </section>
+
+    <section class={styles.experienceSection} id="experience">
+      <ExperienceContainer />
+    </section>
+
+    <section class={styles.projectsSection} id="projects">
+      <ProjectsContainer />
+    </section>
+  </main>
+</Layout>
